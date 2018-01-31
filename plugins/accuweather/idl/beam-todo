@@ -1,0 +1,10 @@
+* TODO Do not use hashing for generating commit IDS
+   - Should use random generatino
+* TODO Each commit should have separate versions, and an information file, listing all assertions
+   - [ ] Information file should contain inputs, assertions, etc
+* TODO Command to move database to a specific commit / branch
+* TODO Command to revert database back to specific commit / branch
+* TODO Create beam-migrate table structure
+* TODO Command to figure out which migration best matches
+   - [ ] Should figure out the commit which is the largest subset of the current assertions
+* TODO 

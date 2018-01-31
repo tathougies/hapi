@@ -1,0 +1,39 @@
+name: hapi-github
+version: 0.1.0.0
+synopsis: Haskell API integration layer
+description:
+license: MIT
+license-file: LICENSE
+author: Travis Athougies
+maintainer: travis@athougies.net
+category: Web
+build-type: Simple
+cabal-version: >=1.18
+
+executable hapi-github
+  main-is: GitHub.hs
+  other-modules:
+    Web.Hapi.GitHub
+    Web.Hapi.GitHub.Types
+  build-depends: hapi,
+                 base    >= 4.7 && < 5.0,
+                 text >= 1.2,
+                 unordered-containers >= 0.2,
+                 scientific >= 0.3,
+                 transformers >= 0.5,
+                 vector >= 0.12,
+                 time >= 1.6,
+                 bytestring >= 0.10,
+
+                 http-types >= 0.9,
+                 http-client >= 0.5,
+                 http-client-tls >= 0.3,
+
+                 HsOpenSSL,
+                 base64-bytestring >= 1.0,
+                 aeson >= 1.1,
+                 mtl >= 2.2,
+                 lens >= 4.15                                              
+  default-language: Haskell2010
+  ghc-options: -O2 -Wall -Werror -dynamic -fno-warn-unused-imports
+  default-extensions: OverloadedStrings

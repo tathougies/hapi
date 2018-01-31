@@ -1,0 +1,17 @@
+resolver: lts-9.0
+packages:
+  - .
+  - plugins/github/
+  - extra-dep: true
+    location: ../beam/
+    subdirs:
+      - beam-core
+      - beam-postgres
+      - beam-sqlite
+      - beam-migrate
+extra-deps:
+  - memcache-0.2.0.1
+extra-lib-dirs:
+  - /usr/local/opt/openssl/lib
+extra-include-dirs:
+  - /usr/local/opt/openssl/include

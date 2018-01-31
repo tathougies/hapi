@@ -1,0 +1,3 @@
+body { max-width: 1000px; padding: 0 5px; margin: 0 auto; }
+
+body > iframe { border: none; width: 1000px }

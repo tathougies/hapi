@@ -1,0 +1,953 @@
+
+./hapi/HapiAPI.hs,2271
+newtype ApiCreationPayload ApiCreationPayload28,29
+newtype ApiCreationPayload = ApiCreationPayload ApiCreationPayload28,29
+newtype ApiRequestInstanceDescription ApiRequestInstanceDescription29,30
+newtype ApiRequestInstanceDescription = ApiRequestInstanceDescription ApiRequestInstanceDescription29,30
+instance instance31,32
+data JSONFormDataJSONFormData40,41
+type UserAPI UserAPI51,52
+type ApiInstanceAPI ApiInstanceAPI55,56
+type ApiAPI ApiAPI61,62
+type ApiDescriptionAPI ApiDescriptionAPI66,67
+type LookupDescriptionAPI LookupDescriptionAPI69,70
+type RequestAPI RequestAPI71,72
+type HapiAPI HapiAPI74,75
+hapiApi hapiApi89,90
+hapiApi hapiApi90,91
+publicEndpointLink publicEndpointLink92,93
+publicEndpointLink publicEndpointLink93,94
+getApiLink getApiLink95,96
+getApiLink getApiLink96,97
+getApiSettingsLink getApiSettingsLink98,99
+getApiSettingsLink getApiSettingsLink99,100
+describeApiLink describeApiLink101,102
+describeApiLink describeApiLink102,103
+describeApiLookupLink describeApiLookupLink104,105
+describeApiLookupLink describeApiLookupLink105,106
+requestLink requestLink107,108
+requestLink requestLink108,109
+describeUserApiLink describeUserApiLink110,111
+describeUserApiLink describeUserApiLink111,112
+createUserApiLink createUserApiLink113,114
+createUserApiLink createUserApiLink114,115
+describeLookupLink describeLookupLink116,117
+describeLookupLink describeLookupLink117,118
+describeUserLookupLink describeUserLookupLink119,120
+describeUserLookupLink describeUserLookupLink120,121
+globalLinkifier globalLinkifier122,123
+globalLinkifier globalLinkifier123,124
+userLinkifier userLinkifier135,136
+userLinkifier userLinkifier136,137
+apiLinkifier apiLinkifier145,146
+apiLinkifier apiLinkifier146,147
+glyphicon_ glyphicon_161,162
+glyphicon_ glyphicon_162,163
+mkLink mkLink164,165
+mkLink mkLink165,166
+resources_ resources_167,168
+resources_ resources_168,169
+apiInformation apiInformation183,184
+apiInformation apiInformation184,185
+settingsForm settingsForm273,274
+settingsForm settingsForm274,275
+class HandleAll HandleAll365,366
+class HandleAll HandleAll365,366
+  throwAll throwAll366,367
+redirect303 redirect303375,376
+redirect303 redirect303376,377
+
+./hapi/Main.hs,942
+module Main Main0,1
+data HapiOptionsHapiOptions48,49
+  = HapiOptionsHapiOptions49,50
+  { port port50,51
+  , config config51,52
+  , migrate migrate52,53
+apiEndpoint apiEndpoint57,58
+apiEndpoint apiEndpoint60,61
+userServer userServer107,108
+userServer userServer108,109
+assertUserExists assertUserExists139,140
+assertUserExists assertUserExists140,141
+withResponseError withResponseError149,150
+withResponseError withResponseError150,151
+userApiServer userApiServer152,153
+userApiServer userApiServer153,154
+apiServer apiServer247,248
+apiServer apiServer248,249
+describeApiServer describeApiServer315,316
+describeApiServer describeApiServer316,317
+fileUploadEndpoint fileUploadEndpoint323,324
+fileUploadEndpoint fileUploadEndpoint324,325
+hapiServer hapiServer350,351
+hapiServer hapiServer351,352
+hapiWebApp hapiWebApp366,367
+hapiWebApp hapiWebApp367,368
+main main369,370
+main main370,371
+
+./idlc/Main.hs,2645
+module Main Main2,3
+main main33,34
+main main34,35
+hsRequestName hsRequestName48,49
+hsRequestName hsRequestName49,50
+ident ident52,53
+ident ident53,54
+identPat identPat55,56
+identPat identPat56,57
+unqual unqual58,59
+unqual unqual59,60
+varNamed varNamed61,62
+varNamed varNamed62,63
+identifierHsName identifierHsName64,65
+identifierHsName identifierHsName65,66
+varNamedQ varNamedQ69,70
+varNamedQ varNamedQ70,71
+infixOp infixOp72,73
+infixOp infixOp73,74
+field field75,76
+field field76,77
+text text78,79
+text text79,80
+string string81,82
+string string82,83
+app app84,85
+app app85,86
+apApp apApp87,88
+apApp apApp88,89
+tuple tuple92,93
+tuple tuple93,94
+tyApp tyApp95,96
+tyApp tyApp96,97
+(*->)*->98,99
+(*(99,100
+tyCon tyCon102,103
+tyCon tyCon103,104
+tyConQ tyConQ105,106
+tyConQ tyConQ106,107
+tyTuple tyTuple108,109
+tyTuple tyTuple109,110
+import_ import_111,112
+import_ import_112,113
+defaultImports defaultImports114,115
+defaultImports defaultImports115,116
+haskellModuleName haskellModuleName127,128
+haskellModuleName haskellModuleName128,129
+pluginTypeToHs pluginTypeToHs134,135
+pluginTypeToHs pluginTypeToHs135,136
+mkJSON mkJSON149,150
+mkJSON mkJSON150,151
+renderHsTypes renderHsTypes181,182
+renderHsTypes renderHsTypes182,183
+renderHsPlugin renderHsPlugin402,403
+renderHsPlugin renderHsPlugin403,404
+labeledCompoundFields labeledCompoundFields528,529
+labeledCompoundFields labeledCompoundFields529,530
+addVarToCtxt addVarToCtxt531,532
+addVarToCtxt addVarToCtxt532,533
+mkVarCtxt mkVarCtxt535,536
+mkVarCtxt mkVarCtxt536,537
+mkDispatch mkDispatch539,540
+mkDispatch mkDispatch540,541
+mkFill mkFill555,556
+mkFill mkFill556,557
+mkForm mkForm584,585
+mkForm mkForm585,586
+compileConfigType compileConfigType675,676
+compileConfigType compileConfigType676,677
+compileIdl compileIdl695,696
+compileIdl compileIdl696,697
+compileType compileType734,735
+compileType compileType735,736
+compileField compileField746,747
+typeRef typeRef750,751
+typeRef typeRef751,752
+class LiftHs LiftHs772,773
+  default liftHs :: (Generic a, GLiftHs (Rep a)) => a a775,776
+  liftHs liftHs773,774
+  liftHs liftHs776,777
+  liftHsList liftHsList778,779
+  liftHsList liftHsList779,780
+instance instance780,781
+class GLiftHs GLiftHs801,802
+class GLiftHs GLiftHs801,802
+  gLiftHs gLiftHs802,803
+class GLiftRecord GLiftRecord813,814
+class GLiftRecord GLiftRecord813,814
+  liftRecord liftRecord814,815
+class GLiftFields GLiftFields820,821
+class GLiftFields GLiftFields820,821
+  liftFields liftFields821,822
+
+./plugins/github/.stack-work/dist/x86_64-osx/Cabal-1.24.2.0/build/autogen/Paths_hapi_github.hs,1251
+module Paths_hapi_github Paths_hapi_github3,4
+catchIO catchIO17,18
+catchIO catchIO19,20
+catchIO catchIO23,24
+catchIO catchIO25,26
+version version27,28
+version version28,29
+bindir, libdir, dynlibdir, datadir, libexecdir, sysconfdir sysconfdir29,30
+bindir, libdir, dynlibdir, datadir, libexecdir,libexecdir29,30
+bindir, libdir, dynlibdir, datadir,datadir29,30
+bindir, libdir, dynlibdir,dynlibdir29,30
+bindir, libdir,libdir29,30
+bindir,bindir29,30
+bindir bindir31,32
+libdir libdir32,33
+dynlibdir dynlibdir33,34
+datadir datadir34,35
+libexecdir libexecdir35,36
+sysconfdir sysconfdir36,37
+getBinDir, getLibDir, getDynLibDir, getDataDir, getLibexecDir, getSysconfDir getSysconfDir38,39
+getBinDir, getLibDir, getDynLibDir, getDataDir, getLibexecDir,getLibexecDir38,39
+getBinDir, getLibDir, getDynLibDir, getDataDir,getDataDir38,39
+getBinDir, getLibDir, getDynLibDir,getDynLibDir38,39
+getBinDir, getLibDir,getLibDir38,39
+getBinDir,getBinDir38,39
+getBinDir getBinDir39,40
+getLibDir getLibDir40,41
+getDynLibDir getDynLibDir41,42
+getDataDir getDataDir42,43
+getLibexecDir getLibexecDir43,44
+getSysconfDir getSysconfDir44,45
+getDataFileName getDataFileName46,47
+getDataFileName getDataFileName47,48
+
+./plugins/github/GitHub.hs,37
+module Main Main2,3
+main main6,7
+
+./plugins/github/Web/Hapi/GitHub/Types.hs,0
+
+./plugins/github/Web/Hapi/GitHub.hs,718
+module Web.Hapi.GitHubWeb.Hapi.GitHub0,1
+import import10,11
+apiRoot apiRoot38,39
+apiRoot apiRoot39,40
+encodeKeyPairRs256 encodeKeyPairRs25641,42
+encodeKeyPairRs256 encodeKeyPairRs25642,43
+b64encode b64encode46,47
+b64encode b64encode47,48
+githubSignAuth githubSignAuth52,53
+githubSignAuth githubSignAuth53,54
+verifyKeyFile verifyKeyFile76,77
+verifyKeyFile verifyKeyFile77,78
+req_Configure req_Configure85,86
+req_Configure req_Configure86,87
+req_AppInfo req_AppInfo121,122
+req_AppInfo req_AppInfo122,123
+githubUserToken githubUserToken153,154
+githubUserToken githubUserToken154,155
+req_ListRepositories req_ListRepositories187,188
+req_ListRepositories req_ListRepositories188,189
+
+./plugins/GitHub.hs,52
+module Main Main0,1
+main main4,5
+main main5,6
+
+./Web/Hapi/Config.hs,652
+module Web.Hapi.Config Web.Hapi.Config0,1
+newtype HapiPluginSource HapiPluginSource16,17
+newtype HapiPluginSource = HapiPluginSource HapiPluginSource16,17
+data HapiConfigHapiConfig19,20
+  = HapiConfigHapiConfig20,21
+  { _hapiConfigPluginSources _hapiConfigPluginSources21,22
+  , _hapiConfigPluginDatabase _hapiConfigPluginDatabase22,23
+  , _hapiConfigMemcache _hapiConfigMemcache23,24
+dropPrefix dropPrefix27,28
+dropPrefix dropPrefix28,29
+instance instance33,34
+readHapiConfig readHapiConfig39,40
+readHapiConfig readHapiConfig40,41
+newDbPoolFromConfig newDbPoolFromConfig42,43
+newDbPoolFromConfig newDbPoolFromConfig43,44
+
+./Web/Hapi/File/Local.hs,223
+module Web.Hapi.File.LocalWeb.Hapi.File.Local0,1
+localUploadBackend localUploadBackend21,22
+localUploadBackend localUploadBackend22,23
+localFileBackend localFileBackend49,50
+localFileBackend localFileBackend50,51
+
+./Web/Hapi/File.hs,210
+module Web.Hapi.File Web.Hapi.File0,1
+data HapiFileBackendHapiFileBackend9,10
+  = HapiFileBackendHapiFileBackend10,11
+  { fileBackendSave fileBackendSave11,12
+  , fileBackendRead fileBackendRead12,13
+
+./Web/Hapi/Plugin/Idl.hs,7186
+module Web.Hapi.Plugin.Idl Web.Hapi.Plugin.Idl0,1
+import import2,3
+newtype Identifier Identifier25,26
+newtype Identifier = Identifier Identifier25,26
+newtype Identifier = Identifier { fromIdentifier fromIdentifier25,26
+newtype PackageName PackageName28,29
+newtype PackageName = PackageName PackageName28,29
+newtype PackageName = PackageName { fromPackageName fromPackageName28,29
+newtype Markup Markup31,32
+newtype Markup = Markup Markup31,32
+newtype Markup = Markup { fromMarkup fromMarkup31,32
+data TypeName TypeName35,36
+data TypeName = TypeName TypeName35,36
+data BuiltinTypeBuiltinType38,39
+  = BuiltinTypeStringBuiltinTypeString39,40
+  | BuiltinTypeTimestampBuiltinTypeTimestamp40,41
+  | BuiltinTypeBoolBuiltinTypeBool41,42
+  | BuiltinTypeDecimalBuiltinTypeDecimal42,43
+  | BuiltinTypeNumberBuiltinTypeNumber43,44
+  | BuiltinTypeFileUploadBuiltinTypeFileUpload44,45
+data PluginTypePluginType49,50
+  = PluginTypeMany PluginTypeMany50,51
+  | PluginTypeOptional PluginTypeOptional51,52
+  | PluginTypeTuple PluginTypeTuple52,53
+  | PluginTypeReference PluginTypeReference53,54
+  | PluginTypeBuiltin PluginTypeBuiltin54,55
+data PluginDataTypeDeclPluginDataTypeDecl59,60
+  = PluginDataTypeChoices PluginDataTypeChoices60,61
+  | PluginDataTypeOpaque PluginDataTypeOpaque61,62
+  | PluginDataTypeData PluginDataTypeData62,63
+data PluginDataTypeChoicePluginDataTypeChoice65,66
+  = PluginDataTypeChoicePluginDataTypeChoice66,67
+  { _dataTypeChoiceConName _dataTypeChoiceConName67,68
+  , _dataTypeChoiceData _dataTypeChoiceData68,69
+data PluginOpaqueDataPluginOpaqueData71,72
+  = PluginOpaqueDataPluginOpaqueData72,73
+  { _opaqueDataScheme _opaqueDataScheme73,74
+data PluginFieldSectionPluginFieldSection76,77
+  = PluginFieldSectionPluginFieldSection77,78
+  { _fieldSectionName _fieldSectionName78,79
+  , _fieldSectionAttributes _fieldSectionAttributes79,80
+data PluginCompoundTypePluginCompoundType82,83
+  = PluginCompoundTypePluginCompoundType83,84
+  { _compoundTypeFields _compoundTypeFields84,85
+  , _compoundTypeSections _compoundTypeSections85,86
+compoundTypeAllFields compoundTypeAllFields88,89
+compoundTypeAllFields compoundTypeAllFields89,90
+data PluginCompoundTypeFieldPluginCompoundTypeField93,94
+  = PluginCompoundTypeFieldPluginCompoundTypeField94,95
+  { _compoundFieldName _compoundFieldName95,96
+  , _compoundFieldType _compoundFieldType96,97
+  , _compoundFieldAttrs _compoundFieldAttrs98,99
+data AttributeAttribute101,102
+  = AttributeAttribute102,103
+  { _attrKey _attrKey103,104
+  , _attrValue _attrValue104,105
+data AttributeValueAttributeValue107,108
+  = AttributeValueExpression AttributeValueExpression108,109
+  | AttributeValueOn AttributeValueOn109,110
+  | AttributeValueOn | AttributeValueOffAttributeValueOff109,110
+data QualifiedIdentifierQualifiedIdentifier112,113
+  = QualifiedIdentifierQualifiedIdentifier113,114
+  { _qualPackage _qualPackage114,115
+  , _qualIdentifier _qualIdentifier115,116
+data ValueValue118,119
+  = ValueNumber ValueNumber119,120
+  | ValueTimestamp ValueTimestamp120,121
+  | ValueBool ValueBool121,122
+  | ValueString ValueString122,123
+  | ValueDecimal ValueDecimal123,124
+data ExpressionExpression126,127
+  = ExpressionIdentifier ExpressionIdentifier127,128
+  | ExpressionGetProperty ExpressionGetProperty128,129
+  | ExpressionBinOp ExpressionBinOp129,130
+  | ExpressionUnOp ExpressionUnOp130,131
+  | ExpressionApply ExpressionApply131,132
+  | ExpressionValue ExpressionValue132,133
+  | ExpressionString ExpressionString133,134
+  | ExpressionMarkdown ExpressionMarkdown134,135
+  | ExpressionTuple ExpressionTuple135,136
+  | ExpressionMany ExpressionMany136,137
+data StringPieceStringPiece139,140
+  = StringPieceText StringPieceText140,141
+  | StringPieceExpression StringPieceExpression141,142
+data PluginRequestDeclPluginRequestDecl144,145
+  = PluginRequestDeclPluginRequestDecl145,146
+  { _requestName _requestName146,147
+  , _requestArgs _requestArgs147,148
+  , _requestResultType _requestResultType148,149
+  , _requestAttributes _requestAttributes149,150
+data PluginLookupDeclPluginLookupDecl152,153
+  = PluginLookupDeclPluginLookupDecl153,154
+  { _lookupName _lookupName154,155
+  , _lookupValues _lookupValues155,156
+  , _lookupKey _lookupKey156,157
+  , _lookupAttributes _lookupAttributes157,158
+data PluginDeclPluginDecl160,161
+  = PluginDeclDataType PluginDeclDataType161,162
+  | PluginDeclRequest PluginDeclRequest162,163
+  | PluginDeclLookup PluginDeclLookup163,164
+data PluginDescrPluginDescr166,167
+  = PluginDescrPluginDescr167,168
+  { _pluginDescrPackage _pluginDescrPackage168,169
+  , _pluginDescrAttrs _pluginDescrAttrs169,170
+  , _pluginDescrDecls _pluginDescrDecls170,171
+type Parser Parser195,196
+sc sc197,198
+sc sc198,199
+lexeme lexeme203,204
+lexeme lexeme204,205
+symbol symbol206,207
+symbol symbol207,208
+brackets, parens parens209,210
+brackets,brackets209,210
+parens parens210,211
+brackets brackets211,212
+commas commas213,214
+commas commas214,215
+semi semi216,217
+semi semi217,218
+rword rword219,220
+rword rword220,221
+rws rws222,223
+rws rws223,224
+identifier identifier226,227
+identifier identifier227,228
+stringLiteral stringLiteral235,236
+stringLiteral stringLiteral236,237
+stringLiteral' stringLiteral'238,239
+stringLiteral' stringLiteral'239,240
+escapeChar escapeChar241,242
+escapeChar escapeChar242,243
+stringExpression stringExpression261,262
+stringExpression stringExpression262,263
+stringPieces stringPieces264,265
+stringPieces stringPieces265,266
+quotedIdentifier quotedIdentifier279,280
+quotedIdentifier quotedIdentifier280,281
+qualified' qualified'282,283
+qualified' qualified'283,284
+qualified qualified289,290
+qualified qualified290,291
+packageName packageName294,295
+packageName packageName295,296
+pluginDescr pluginDescr301,302
+pluginDescr pluginDescr302,303
+pluginDecl pluginDecl310,311
+pluginDecl pluginDecl311,312
+opaqueDecl opaqueDecl327,328
+opaqueDecl opaqueDecl328,329
+choicesDecl choicesDecl330,331
+choicesDecl choicesDecl331,332
+typeName typeName336,337
+typeName typeName337,338
+expression expression341,342
+expression expression342,343
+hereDoc hereDoc386,387
+hereDoc hereDoc387,388
+compoundTypeDecl compoundTypeDecl411,412
+compoundTypeDecl compoundTypeDecl412,413
+compoundType compoundType414,415
+compoundType compoundType415,416
+pluginFieldSection pluginFieldSection418,419
+pluginFieldSection pluginFieldSection419,420
+pluginField pluginField421,422
+pluginField pluginField422,423
+attributes' attributes'429,430
+attributes' attributes'430,431
+attributes attributes440,441
+attributes attributes441,442
+pluginType pluginType443,444
+pluginType pluginType444,445
+requestDecl requestDecl461,462
+requestDecl requestDecl462,463
+lookupDecl lookupDecl469,470
+lookupDecl lookupDecl470,471
+parseFile parseFile477,478
+parseFile parseFile478,479
+findAttribute findAttribute484,485
+findAttribute findAttribute485,486
+instance instance491,492
+
+./Web/Hapi/Plugin/Interface.hs,1275
+module Web.Hapi.Plugin.InterfaceWeb.Hapi.Plugin.Interface0,1
+data PluginCmdLinePluginCmdLine50,51
+  = PluginNamePluginName51,52
+  | PluginHandleRequestPluginHandleRequest52,53
+  | PluginIdlPluginIdl53,54
+  | PluginDescribePluginDescribe54,55
+  | PluginServePluginServe56,57
+newtype PluginContextPluginContext62,63
+  = PluginContext PluginContext63,64
+pluginMain pluginMain66,67
+pluginMain pluginMain67,68
+varCtxtFromObj varCtxtFromObj80,81
+varCtxtFromObj varCtxtFromObj81,82
+mkHapiValueLabel mkHapiValueLabel83,84
+mkHapiValueLabel mkHapiValueLabel84,85
+mkHapiConfigDefault mkHapiConfigDefault97,98
+mkHapiConfigDefault mkHapiConfigDefault98,99
+runIdlExpression runIdlExpression109,110
+runIdlExpression runIdlExpression110,111
+hapiValue hapiValue144,145
+hapiValue hapiValue145,146
+varCtxt varCtxt151,152
+varCtxt varCtxt152,153
+doNormalize doNormalize154,155
+doNormalize doNormalize155,156
+settingsChangeAllowed settingsChangeAllowed176,177
+settingsChangeAllowed settingsChangeAllowed177,178
+rerefFiles rerefFiles222,223
+rerefFiles rerefFiles223,224
+cacheJSON cacheJSON249,250
+cacheJSON cacheJSON253,254
+cacheKeyJSON cacheKeyJSON256,257
+cacheKeyJSON cacheKeyJSON261,262
+cache cache266,267
+cache cache268,269
+
+./Web/Hapi/Plugin/Manager.hs,6182
+module Web.Hapi.Plugin.Manager Web.Hapi.Plugin.Manager0,1
+data NoSuchPlugin NoSuchPlugin62,63
+data NoSuchPlugin = NoSuchPlugin NoSuchPlugin62,63
+newtype PluginClientId PluginClientId66,67
+newtype PluginClientId = PluginClientId PluginClientId66,67
+data PluginWaitingClient PluginWaitingClient68,69
+  PluginWaitingStream PluginWaitingStream69,70
+  PluginWaitingOn PluginWaitingOn70,71
+  PluginWaitingQueue PluginWaitingQueue71,72
+  PluginWaitingStream PluginWaitingStream69,70
+  PluginWaitingOn PluginWaitingOn70,71
+  PluginWaitingQueue PluginWaitingQueue71,72
+data PluginManagerPluginManager73,74
+  = PluginManagerPluginManager74,75
+  { _pluginManagerActivePlugins _pluginManagerActivePlugins75,76
+  , _pluginManagerRegistry _pluginManagerRegistry76,77
+  , _pluginManagerConfig _pluginManagerConfig77,78
+  , _pluginManagerEndpointLink _pluginManagerEndpointLink78,79
+  , _pluginManagerDb _pluginManagerDb79,80
+  , _pluginManagerFileBackend _pluginManagerFileBackend80,81
+data PluginStatePluginState83,84
+  = PluginStatePluginState84,85
+  { _pluginStateNextToken _pluginStateNextToken85,86
+  , _pluginStateLastUse _pluginStateLastUse86,87
+  , _pluginStateStdIn _pluginStateStdIn87,88
+  , _pluginStateClientsWaiting _pluginStateClientsWaiting88,89
+  , _pluginStateApiDescription _pluginStateApiDescription89,90
+  , _pluginStateInitInfo _pluginStateInitInfo90,91
+  , _pluginStateClient _pluginStateClient91,92
+data PluginClientStatePluginClientState94,95
+  = PluginClientStatePluginClientState95,96
+  { _pluginClientStateMemcachePool _pluginClientStateMemcachePool96,97
+data PluginPlugin99,100
+  = PluginPlugin100,101
+  { _pluginName _pluginName101,102
+  , _pluginIdl _pluginIdl102,103
+  , _pluginDescription _pluginDescription103,104
+  , _pluginConfigTemplate _pluginConfigTemplate104,105
+  , _pluginConfigureRequest, _pluginConfigTypeName _pluginConfigTypeName105,106
+  , _pluginNormalize _pluginNormalize106,107
+  , _pluginFill _pluginFill107,108
+  , _pluginForm _pluginForm108,109
+  , _pluginImpl _pluginImpl109,110
+data PluginInitInfoPluginInitInfo112,113
+  = PluginInitInfoPluginInitInfo113,114
+  { _pluginInitMemcache _pluginInitMemcache114,115
+instance instance117,118
+data PluginRequest PluginRequest128,129
+  PluginRequestInitialize PluginRequestInitialize129,130
+  PluginRequestName PluginRequestName130,131
+  PluginRequestIdl PluginRequestIdl131,132
+  PluginRequestConfigTypeName PluginRequestConfigTypeName133,134
+  PluginRequestConfigRequest PluginRequestConfigRequest134,135
+  PluginRequestDescription PluginRequestDescription136,137
+  PluginRequestInitialConfig PluginRequestInitialConfig137,138
+  PluginRequestNormalize PluginRequestNormalize138,139
+  PluginRequestFill PluginRequestFill139,140
+  PluginRequestForm PluginRequestForm140,141
+  PluginRequestPerform PluginRequestPerform142,143
+data SomePluginRequest SomePluginRequest145,146
+  SomePluginRequest SomePluginRequest146,147
+  SomePluginRequest SomePluginRequest146,147
+data PluginMasterRequest PluginMasterRequest149,150
+  PluginMasterRequestGetDefault PluginMasterRequestGetDefault150,151
+  PluginMasterRequestGetValue PluginMasterRequestGetValue151,152
+  PluginMasterRequestGetConfig PluginMasterRequestGetConfig152,153
+  PluginMasterRequestMkRequest PluginMasterRequestMkRequest153,154
+  PluginMasterRequestNormalize PluginMasterRequestNormalize154,155
+  PluginMasterRequestGetControlForType PluginMasterRequestGetControlForType155,156
+  PluginMasterRequestFileName PluginMasterRequestFileName156,157
+  PluginMasterRequestGetFileContents PluginMasterRequestGetFileContents157,158
+data SomeMasterPluginRequest SomeMasterPluginRequest159,160
+  SomeMasterPluginRequest SomeMasterPluginRequest160,161
+  SomeMasterPluginRequest SomeMasterPluginRequest160,161
+data NewPluginRequest NewPluginRequest163,164
+data NewPluginRequest a = NewPluginRequest NewPluginRequest163,164
+class PluginData PluginData166,167
+  pluginDataWrite :: MonadIO m => a a168,169
+  pluginDataRead pluginDataRead167,168
+  pluginDataWrite pluginDataWrite168,169
+pluginWriteJSON pluginWriteJSON176,177
+pluginWriteJSON pluginWriteJSON177,178
+pluginReadJSON pluginReadJSON179,180
+pluginReadJSON pluginReadJSON180,181
+encodePluginRequest encodePluginRequest291,292
+encodePluginRequest encodePluginRequest292,293
+decodePluginRequest decodePluginRequest310,311
+decodePluginRequest decodePluginRequest311,312
+encodeMasterPluginRequest encodeMasterPluginRequest313,314
+encodeMasterPluginRequest encodeMasterPluginRequest314,315
+masterParser masterParser339,340
+masterParser masterParser340,341
+pluginParser pluginParser383,384
+pluginParser pluginParser384,385
+internalClient internalClient424,425
+internalClient internalClient425,426
+newPluginManager newPluginManager427,428
+newPluginManager newPluginManager432,433
+requestFromPlugin requestFromPlugin436,437
+requestFromPlugin requestFromPlugin437,438
+requestFromMaster requestFromMaster451,452
+requestFromMaster requestFromMaster452,453
+getPluginSt getPluginSt466,467
+getPluginSt getPluginSt467,468
+verifyPluginPublicAccess verifyPluginPublicAccess516,517
+verifyPluginPublicAccess verifyPluginPublicAccess517,518
+getPublicEndpoint getPublicEndpoint524,525
+getPublicEndpoint getPublicEndpoint525,526
+respondToMasterRequest respondToMasterRequest561,562
+respondToMasterRequest respondToMasterRequest562,563
+writePluginHandle writePluginHandle622,623
+writePluginHandle writePluginHandle623,624
+readStorable readStorable630,631
+readStorable readStorable631,632
+writeStorable writeStorable644,645
+writeStorable writeStorable645,646
+pluginInputWorker pluginInputWorker653,654
+pluginInputWorker pluginInputWorker654,655
+newQueueReader newQueueReader694,695
+newQueueReader newQueueReader695,696
+parseMemcacheUrl parseMemcacheUrl708,709
+parseMemcacheUrl parseMemcacheUrl709,710
+clientPluginMain clientPluginMain726,727
+clientPluginMain clientPluginMain727,728
+runPluginMStreaming runPluginMStreaming793,794
+runPluginMStreaming runPluginMStreaming794,795
+
+./Web/Hapi/Plugin/Monad.hs,1878
+module Web.Hapi.Plugin.Monad Web.Hapi.Plugin.Monad0,1
+data PluginF PluginF24,25
+  GetPluginName GetPluginName25,26
+  GetPluginConfig GetPluginConfig26,27
+  MkRequest MkRequest28,29
+  GetDefault GetDefault30,31
+  Normalize Normalize31,32
+  GetControlForType GetControlForType32,33
+  GetCurrentTime GetCurrentTime33,34
+  GetFileName GetFileName35,36
+  ReadFile ReadFile36,37
+  DoIO DoIO38,39
+  Fail Fail39,40
+  WithMemcache WithMemcache41,42
+newtype PluginM PluginM44,45
+newtype PluginM a = PluginM PluginM44,45
+newtype PluginM a = PluginM { unPluginM unPluginM44,45
+instance instance47,48
+getPluginName getPluginName63,64
+getPluginName getPluginName64,65
+getPluginConfig getPluginConfig66,67
+getPluginConfig getPluginConfig67,68
+withMemcacheClient withMemcacheClient69,70
+withMemcacheClient withMemcacheClient70,71
+mkRequest mkRequest73,74
+mkRequest mkRequest75,76
+getVariable getVariable78,79
+getVariable getVariable79,80
+getDefaultRef getDefaultRef82,83
+getDefaultRef getDefaultRef83,84
+getCurrentTimePlugin getCurrentTimePlugin85,86
+getCurrentTimePlugin getCurrentTimePlugin86,87
+getControlForType getControlForType88,89
+getControlForType getControlForType89,90
+normalizeExternalType normalizeExternalType92,93
+normalizeExternalType normalizeExternalType93,94
+getFileNameFromURI getFileNameFromURI95,96
+getFileNameFromURI getFileNameFromURI96,97
+pluginReadFile pluginReadFile102,103
+pluginReadFile pluginReadFile103,104
+putJSONLn putJSONLn108,109
+putJSONLn putJSONLn109,110
+readJSONLn readJSONLn111,112
+readJSONLn readJSONLn112,113
+class FromHapiObject FromHapiObject117,118
+class FromHapiObject FromHapiObject117,118
+  decodeHapiObject decodeHapiObject118,119
+class ToHapiValue ToHapiValue119,120
+class ToHapiValue ToHapiValue119,120
+  encodeHapiValue encodeHapiValue120,121
+
+./Web/Hapi/Registry.hs,1219
+module Web.Hapi.Registry Web.Hapi.Registry0,1
+newtype HapiPluginRegistryHapiPluginRegistry19,20
+  = HapiPluginRegistry HapiPluginRegistry20,21
+  = HapiPluginRegistry { _registryApis _registryApis20,21
+data HapiPluginRegistrationHapiPluginRegistration23,24
+  = HapiPluginRegistrationHapiPluginRegistration24,25
+  { _pluginRegistrationName _pluginRegistrationName25,26
+  , _pluginRegistrationDescription _pluginRegistrationDescription26,27
+  , _pluginExecutable _pluginExecutable27,28
+data ApiLinkifierApiLinkifier30,31
+  = ApiLinkifierApiLinkifier31,32
+  { linkLookupDescriptionUrl linkLookupDescriptionUrl32,33
+  , linkLookupUrl linkLookupUrl33,34
+  , linkTypeDescriptionUrl linkTypeDescriptionUrl34,35
+  , linkPackageUrl linkPackageUrl35,36
+  , linkRequestUrl linkRequestUrl36,37
+registryFromConfig registryFromConfig42,43
+registryFromConfig registryFromConfig43,44
+registerPlugin registerPlugin47,48
+registerPlugin registerPlugin48,49
+fetchPluginText fetchPluginText58,59
+fetchPluginText fetchPluginText59,60
+crossLinkRegistry crossLinkRegistry65,66
+crossLinkRegistry crossLinkRegistry66,67
+crossLinkPlugin crossLinkPlugin68,69
+crossLinkPlugin crossLinkPlugin69,70
+
+./Web/Hapi/Schema.hs,2224
+module Web.Hapi.Schema Web.Hapi.Schema0,1
+data UserT UserT18,19
+  = UserUser19,20
+  { _userId _userId20,21
+  , _userHomepage _userHomepage21,22
+  , _userCreated _userCreated22,23
+instance instance26,27
+type User User34,35
+type UserKey UserKey38,39
+data ApiRegistrationT ApiRegistrationT47,48
+  = ApiRegistrationApiRegistration48,49
+  { _apiId _apiId49,50
+  , _apiName _apiName50,51
+  , _apiCreated _apiCreated51,52
+  , _apiUser _apiUser52,53
+  , _apiData _apiData53,54
+type ApiRegistration ApiRegistration68,69
+type ApiRegistrationKey ApiRegistrationKey72,73
+data PublicEndpointT PublicEndpointT81,82
+  = PublicEndpointPublicEndpoint82,83
+  { _endpointPath _endpointPath83,84
+  , _endpointUser _endpointUser84,85
+  , _endpointApi _endpointApi85,86
+  , _endpointRequest _endpointRequest86,87
+type PublicEndpoint PublicEndpoint99,100
+type PublicEndpointKey PublicEndpointKey103,104
+data ConfigurationT ConfigurationT109,110
+  = ConfigurationConfiguration110,111
+  { _configurationUser _configurationUser111,112
+  , _configurationApi _configurationApi112,113
+  , _configurationKey _configurationKey113,114
+  , _configurationType _configurationType114,115
+  , _configurationValue _configurationValue115,116
+type Configuration Configuration130,131
+type ConfigurationKey ConfigurationKey134,135
+data FileUploadT FileUploadT140,141
+  = FileUploadFileUpload141,142
+  { _fileUploadId _fileUploadId142,143
+  , _fileUploadName _fileUploadName143,144
+  , _fileUploadMimeType _fileUploadMimeType144,145
+  , _fileUploadData _fileUploadData145,146
+  , _fileUploadCreatedAt _fileUploadCreatedAt146,147
+  , _fileUploadUsed _fileUploadUsed147,148
+  , _fileUploadSecret _fileUploadSecret148,149
+type FileUpload FileUpload161,162
+type FileUploadKey FileUploadKey165,166
+data Db Db171,172
+  = DbDb172,173
+  { _dbUsers _dbUsers173,174
+  , _dbApis _dbApis174,175
+  , _dbUploads _dbUploads175,176
+  , _dbConfigurations _dbConfigurations176,177
+  , _dbPublicEndpoints _dbPublicEndpoints177,178
+  , _dbCryptoModule _dbCryptoModule178,179
+migration migration184,185
+migration migration185,186
+hapiDb hapiDb227,228
+hapiDb hapiDb228,229
+
+./Web/Hapi/Types.hs,8682
+module Web.Hapi.Types Web.Hapi.Types2,3
+import import7,8
+newtype UserId UserId38,39
+newtype UserId = UserId UserId38,39
+newtype UserId = UserId { userIdToken userIdToken38,39
+newtype ApiId ApiId40,41
+newtype ApiId = ApiId ApiId40,41
+newtype ApiId = ApiId { apiIdToken apiIdToken40,41
+newtype FileId FileId42,43
+newtype FileId = FileId FileId42,43
+newtype FileId = FileId { fileIdToken fileIdToken42,43
+newtype FileUrl FileUrl44,45
+newtype FileUrl = FileUrl FileUrl44,45
+newtype FileUrl = FileUrl { fileUrlText fileUrlText44,45
+newtype AsyncToken AsyncToken46,47
+newtype AsyncToken = AsyncToken AsyncToken46,47
+newtype AsyncToken = AsyncToken { asyncTokenText asyncTokenText46,47
+newtype ApiName ApiName48,49
+newtype ApiName = ApiName ApiName48,49
+newtype ApiName = ApiName { apiName apiName48,49
+newtype PropertyName PropertyName50,51
+newtype PropertyName = PropertyName PropertyName50,51
+newtype PropertyName = PropertyName { propertyName propertyName50,51
+newtype ApiRequestName ApiRequestName52,53
+newtype ApiRequestName = ApiRequestName ApiRequestName52,53
+newtype ApiRequestName = ApiRequestName { getApiRequestName getApiRequestName52,53
+data ScopeContextScopeContext55,56
+  = ScopeContextGlobalScopeContextGlobal56,57
+  | ScopeContextUser ScopeContextUser57,58
+  | ScopeContextUser { _scopeContextUser _scopeContextUser57,58
+  | ScopeContextApi ScopeContextApi58,59
+  | ScopeContextApi  { _scopeContextUser _scopeContextUser58,59
+  | ScopeContextApi  { _scopeContextUser :: !UserId, _scopeContextApi _scopeContextApi58,59
+newtype HapiObjectHapiObject61,62
+  = HapiObjectHapiObject62,63
+  { objectKeys objectKeys63,64
+data HapiValueHapiValue66,67
+  = HapiValueText HapiValueText67,68
+  | HapiValueHtml HapiValueHtml68,69
+  | HapiValueNumber HapiValueNumber69,70
+  | HapiValueTimestamp HapiValueTimestamp70,71
+  | HapiValueTuple HapiValueTuple71,72
+  | HapiValueList HapiValueList72,73
+  | HapiValueFile HapiValueFile73,74
+  | HapiValueObject HapiValueObject74,75
+  | HapiValueCredential HapiValueCredential75,76
+  | HapiValueSwitch HapiValueSwitch76,77
+  | HapiValueJust HapiValueJust77,78
+  | HapiValueNothingHapiValueNothing78,79
+data ApiStatusApiStatus81,82
+  = ApiStatusUpApiStatusUp82,83
+  | ApiStatusError ApiStatusError83,84
+data ApiEntityScopeApiEntityScope86,87
+  = ApiScopeGlobalApiScopeGlobal87,88
+  | ApiScopeUserApiScopeUser88,89
+  | ApiScopeInstanceApiScopeInstance89,90
+data ApiEntityVisibilityApiEntityVisibility92,93
+  = ApiVisibilityInternalApiVisibilityInternal93,94
+  | ApiVisibilityPrivateApiVisibilityPrivate94,95
+  | ApiVisibilityPublicApiVisibilityPublic95,96
+data ApiDescriptionApiDescription98,99
+  = ApiDescriptionApiDescription99,100
+  { _apiDescriptionName _apiDescriptionName100,101
+  , _apiDescriptionLookups _apiDescriptionLookups101,102
+  , _apiDescriptionRequests _apiDescriptionRequests102,103
+  , _apiDescriptionTypes _apiDescriptionTypes103,104
+  , _apiDescriptionCreateUrl _apiDescriptionCreateUrl104,105
+data ApiLookupDescriptionApiLookupDescription107,108
+  = ApiLookupDescriptionApiLookupDescription108,109
+  { _apiLookupName _apiLookupName109,110
+  , _apiLookupScope _apiLookupScope110,111
+  , _apiLookupVisible _apiLookupVisible111,112
+  , _apiLookupKey _apiLookupKey112,113
+  , _apiLookupValue _apiLookupValue113,114
+  , _apiLookupDescriptionUrl, _apiLookupUrl _apiLookupUrl114,115
+data ApiRequestDescriptionApiRequestDescription117,118
+  = ApiRequestDescriptionApiRequestDescription118,119
+  { _apiRequestName _apiRequestName119,120
+  , _apiRequestScope _apiRequestScope120,121
+  , _apiRequestVisible _apiRequestVisible121,122
+  , _apiRequestInput _apiRequestInput122,123
+  , _apiRequestOutput _apiRequestOutput123,124
+  , _apiRequestUrl _apiRequestUrl124,125
+data ApiTypeDescriptionApiTypeDescription127,128
+  = ApiTypeMany ApiTypeMany128,129
+  | ApiTypeOptional ApiTypeOptional129,130
+  | ApiTypeTuple ApiTypeTuple130,131
+  | ApiTypeDescriptionApiTypeDescription131,132
+  { _apiTypeName _apiTypeName132,133
+  , _apiTypeSource _apiTypeSource133,134
+  , _apiTypeDescriptionUrl _apiTypeDescriptionUrl134,135
+data ApiTypeSourceApiTypeSource137,138
+  = ApiTypeSourceBuiltinApiTypeSourceBuiltin138,139
+  | ApiTypeSourcePackageApiTypeSourcePackage139,140
+  { _apiTypeSourcePackage _apiTypeSourcePackage140,141
+  , _apiTypeSourcePackageUrl _apiTypeSourcePackageUrl141,142
+data ApiCompoundTypeSchemaApiCompoundTypeSchema144,145
+  = ApiCompoundTypeSchemaApiCompoundTypeSchema145,146
+  { _apiCompoundTypeFields _apiCompoundTypeFields146,147
+  , _apiCompoundTypeSections _apiCompoundTypeSections147,148
+data ApiCompoundFieldSchemaApiCompoundFieldSchema150,151
+  = ApiCompoundFieldSchemaApiCompoundFieldSchema151,152
+  { _apiCompoundFieldName _apiCompoundFieldName152,153
+  , _apiCompoundFieldType _apiCompoundFieldType153,154
+  , _apiCompoundFieldVisibility _apiCompoundFieldVisibility154,155
+  , _apiCompoundFieldRequired _apiCompoundFieldRequired155,156
+  , _apiCompoundFieldDescription _apiCompoundFieldDescription156,157
+data ApiTypeSchemaApiTypeSchema159,160
+  = ApiTypeSchemaChoices ApiTypeSchemaChoices160,161
+  | ApiTypeSchemaCompound ApiTypeSchemaCompound161,162
+  | ApiTypeSchemaOpaque ApiTypeSchemaOpaque162,163
+data ApisStatusApisStatus165,166
+  = ApisStatusApisStatus166,167
+  { _apisStatusAvailable _apisStatusAvailable167,168
+  , _apisStatusActive _apisStatusActive168,169
+data ActiveApiLinkActiveApiLink171,172
+  = ActiveApiLinkActiveApiLink172,173
+  { _activeApiLinkId _activeApiLinkId173,174
+  , _activeApiLinkUrl _activeApiLinkUrl174,175
+data AvailableApiLinkAvailableApiLink177,178
+  = AvailableApiLinkAvailableApiLink178,179
+  { _availableApiLinkName _availableApiLinkName179,180
+  , _availableApiLinkDescriptionUrl _availableApiLinkDescriptionUrl180,181
+  , _availableApiLinkCreateUrl _availableApiLinkCreateUrl181,182
+data UserUser184,185
+  = UserUser185,186
+  { _userId _userId186,187
+  , _userHomepage _userHomepage187,188
+data UserCreationUserCreation190,191
+  = UserCreationUserCreation191,192
+  { _userCreationHomepage _userCreationHomepage192,193
+data ActivatedApiActivatedApi195,196
+  = ActivatedApiActivatedApi196,197
+  { _activatedApiId _activatedApiId197,198
+  , _activatedApiApi _activatedApiApi198,199
+  , _activatedApiApiUrl _activatedApiApiUrl199,200
+  , _activatedApiStatus _activatedApiStatus200,201
+  , _activatedApiSettings _activatedApiSettings201,202
+  , _activatedApiSettingsUrl _activatedApiSettingsUrl202,203
+  , _activatedApiDescription _activatedApiDescription204,205
+data ApiSettingsDescriptionApiSettingsDescription207,208
+  = ApiSettingsDescriptionApiSettingsDescription208,209
+  { _apiSettingsSections _apiSettingsSections209,210
+  , _apiSettingsFields _apiSettingsFields210,211
+  , _apiSettingsErrors _apiSettingsErrors211,212
+data ApiSettingsSectionApiSettingsSection214,215
+  = ApiSettingsSectionApiSettingsSection215,216
+  { _apiSettingsSectionHelp _apiSettingsSectionHelp216,217
+  , _apiSettingsSectionFields _apiSettingsSectionFields217,218
+data ApiSettingsFieldApiSettingsField220,221
+  = ApiSettingsFieldApiSettingsField221,222
+  { _apiSettingsFieldName _apiSettingsFieldName222,223
+  , _apiSettingsFieldLabel _apiSettingsFieldLabel223,224
+  , _apiSettingsFieldHelp _apiSettingsFieldHelp224,225
+  , _apiSettingsFieldControl _apiSettingsFieldControl225,226
+data ApiSettingsControlApiSettingsControl228,229
+  = ApiSettingsControlText ApiSettingsControlText229,230
+  | ApiSettingsControlCalendar ApiSettingsControlCalendar230,231
+  | ApiSettingsControlNumber ApiSettingsControlNumber231,232
+  | ApiSettingsControlChoices ApiSettingsControlChoices232,233
+  | ApiSettingsControlLabel ApiSettingsControlLabel233,234
+  | ApiSettingsControlFileUpload ApiSettingsControlFileUpload234,235
+atScope atScope268,269
+atScope atScope269,270
+instance instance277,278
+hapiValueFiles hapiValueFiles296,297
+hapiValueFiles hapiValueFiles297,298
+hapiObjectValues hapiObjectValues305,306
+hapiObjectValues hapiObjectValues306,307
+fileUrlFileId fileUrlFileId308,309
+fileUrlFileId fileUrlFileId309,310
+detokenize detokenize316,317
+detokenize detokenize317,318
+userIdUuid userIdUuid332,333
+userIdUuid userIdUuid333,334
+apiIdUuid apiIdUuid335,336
+apiIdUuid apiIdUuid336,337
+fileIdUuid fileIdUuid338,339
+fileIdUuid fileIdUuid339,340
+randomString randomString341,342
+randomString randomString342,343
+    | "user" `T.isPrefixOf`T.isPrefixOf355,356

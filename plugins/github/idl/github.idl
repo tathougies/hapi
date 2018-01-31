@@ -1,0 +1,148 @@
+service com.github [ haskellModule="Web.Hapi.GitHub" ];
+ 
+--opaque data GitHubConfiguration "github-configuration";
+opaque data GitHubUser "github-user";
+
+data GitHubUserToken (
+   string userToken;
+);
+
+lookup GitHubUserTokens finds ( GitHubUserToken token; ) by ( GitHubUser user; ) [scope=api_instance];
+
+choices GitHubSortDirection (Ascending, Descending);
+
+data GitHubConfiguration (
+    ["Application Setup"
+
+     description =$>
+       > Please follow the instructions on [GitHub](https://developer.github.com/apps/building-integrations/setting-up-and-registering-github-apps/registering-github-apps/)
+       > to register a new app.
+       >
+       > Use the following information to create your account:
+       >
+       >  ------------------------------------ ---------------------------------------------------------
+       >  **Homepage URL**                     `${.com.hapi.app_url}`
+       >  **User authorization callback URL**  `${.com.hapi.GetPublicUrl(requestNm="UserCallback";)}`
+       >  ------------------------------------ ---------------------------------------------------------
+       >
+       > Be sure to allow the app to be installed on 'Any account'.
+    ]
+
+    string clientId [
+      name="Client ID"
+      description=>
+        > Copy the GitHub application client ID here (at bottom of page)
+    ];
+
+    string clientSecret [
+      name="Client Secret"
+      description=>
+        > Copy the GitHub application client secret here
+    ];
+
+    ["Defaults"]
+
+    string default_user [
+      name="Default user"
+      description = "The user to use by default when no user is supplied. Leave empty for no user"
+      fill=""
+    ];
+
+    ["Permissions"]
+
+    GitHubPermissions scopes [
+      name="Permissions"
+      description = >
+        > Permissions this application requests. These are what is requested from GitHub.
+        >
+        > Requests for which permissions have not been requested will fail.
+    ];
+);
+
+choices GitHubAccess (None, Read, Write, Admin);
+
+data GitHubPermissions (
+  boolean user [name="All user permissions" fill=true];
+  boolean publicRepo [ name="Public repository permissions" fill=true];
+  boolean repo [ name="All repository permissions" fill=true];
+  boolean repoDeployment [ name="Repository deployment statuses" ];
+  boolean deleteRepo [ name="Delete repositories" ];
+  boolean notifications [ name="Notifications" ];
+  boolean gist [ name="Write access to gists" ];
+  GitHubAccess repoHook [ name="Repository hook permissions" ];
+  boolean orgHook [ name="Organization hooks" ];
+  GitHubAccess org [ name="Organization access" ];
+  GitHubAccess publicKey [ name="Public key access" ];
+  GitHubAccess gpgKey [ name="GPG key access" ];
+);
+
+request Configure ( GitHubConfiguration new; ) -> many string
+    [ public configure ];
+
+request UserCallback ( com.hapi.Request req; ) -> com.hapi.Response
+    [ public GET accept_json scope=api_instance ];
+
+request WebHook ( com.hapi.Request req; ) -> com.hapi.Response
+    [ public GET accept_json scope=global unimplemented ];
+
+data GitHubUserInfo (
+  string login;
+  number id;
+) [json];
+
+-- Authentication flow
+
+data GitHubAuthCode (
+  string code;
+  string state;
+);
+
+data GitHubRepository (
+  number id;
+  string name;
+  string fullName [ json="full_name" ];
+  GitHubUserInfo owner;
+) [json];
+
+data GitHubAuthTokenResponse (
+  string accessToken [formdata="access_token" json="access_token"];
+  string tokenType [formdata="token_type" json="token_type"];
+) [formdata json];
+
+-- Repositories
+
+request ListRepositories (
+  GitHubConfiguration config [ config !visible ];
+
+  string user [ fill=config.default_user ];
+  optional string as_user;
+
+  number offset [ fill=0 ];
+  number maximum [ fill=5 ];
+) -> many GitHubRepository;
+
+-- Issues
+
+opaque data GitHubIssueId "github-issue-id";
+
+data GitHubIssue (
+   GitHubIssueId id;
+);
+
+choices GitHubIssuesFilter
+   ( Assigned, Created, Mentioned, Subscribed, All );
+choices GitHubIssuesState
+   ( Open, Closed, All );
+choices GitHubIssuesSort
+   ( Created, Updated, Comments );
+
+request GetAllIssues (
+   optional GitHubIssuesFilter filter;
+   optional GitHubIssuesState  state;
+   many string labels [default=[]];
+   optional GitHubIssuesSort   sort;
+   optional GitHubSortDirection dir;
+   optional timestamp          since;
+
+   optional GitHubUser         user;
+) -> many GitHubIssue [ unimplemented ];

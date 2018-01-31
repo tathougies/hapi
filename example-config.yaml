@@ -1,0 +1,5 @@
+plugin-database: dbname=hapi
+plugin-sources:
+  - hapi-github
+memcache: memcache://localhost:11211
+jwt-secret: AENTUHAONTEUANOTEUMAOENTUB@a,ubantoeub1p-092031-!S@#$!@$-112312tbaneumaeou 
